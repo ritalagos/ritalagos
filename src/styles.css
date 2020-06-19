@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+.animacion {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media(prefers-reduced-motion) {
+    .animacion {
+        -webkit-animation: unset !important;
+        animation: unset !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+@-webkit-keyframes fundirse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    ;
+}
+
+@keyframes fundirse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fundirse {
+    -webkit-animation-name: fundirse;
+    animation-name: fundirse;
+}

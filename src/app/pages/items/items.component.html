@@ -1,0 +1,19 @@
+<section class="main-photograhy">
+    <div class="photograhy">
+        <div class="defilee__outer">
+            <section id="defilee" class="defilee__ctnr">
+
+                <div *ngFor="let photo of photosServices.photos" class="defilee__div {{photo.clase}} animacion fundirse">
+                    <img src="assets/images/{{photo.url}}.png" alt="{{photo.cod}}">
+                    <p>{{photo.descripcion}}</p>
+                </div>
+                <!--
+                <div class="defilee__div defilee__div--text">
+                    <h2>Mis <a href="#">Proyectos!</a></h2>
+                </div>
+                -->
+
+            </section>
+        </div>
+    </div>
+</section>

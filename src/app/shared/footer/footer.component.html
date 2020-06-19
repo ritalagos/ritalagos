@@ -1,0 +1,47 @@
+<footer class="pt-2 my-md-2 pt-md-2 border-top">
+    <div class="row avatar">
+        <div class="col-md">
+            <div class="row">
+                <div class="col col-md-4">
+                    <h4>Acerca de:</h4>
+                    <img class="rounded-circle" src="assets/images/logo.jpg" alt="Logo" width="150" height="150">
+                </div>
+                <div class="col col-md-8">
+                    <p>{{acercaDe}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md">
+            <p>{{infoPagina}}</p>
+
+            <div class="sidebar-footer">
+                <div class="footer-container d-flex justify-content-center">
+                    <div class="icons rounded-circle">
+                        <a target="_blank" [href]="socialPagina.social.facebook" title="Facebook">
+                            <i class="icon ion-logo-facebook mr-4 lead"></i>
+                        </a>
+                    </div>
+
+                    <div class="icons rounded-circle">
+                        <a target="_blank" [href]="socialPagina.social.pinterest" title="Pinterest">
+                            <i class="icon ion-logo-pinterest mr-4 lead "></i>
+                        </a>
+                    </div>
+
+                    <div class="icons rounded-circle ">
+                        <a target="_blank " [href]="socialPagina.social.linkedin " title="Linkedin ">
+                            <i class="icon ion-logo-linkedin mr-4 lead "></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center derecho">
+        Copyright &copy;
+        {{fecha}}
+        All rights reserved.
+    </p>
+</footer>

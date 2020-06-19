@@ -1,0 +1,25 @@
+<div class="shell">
+    <div class="shell-header">
+        <h1>Hola. Soy Rita, aficionada al diseño.</h1>
+    </div>
+    <section class="shell-body">
+
+        <div *ngFor="let about of abouts.about" class="card mb-4 animate__animated animate__slideInDown">
+            <div class="card-header">
+                <strong>{{about.titulo}}</strong>
+            </div>
+            <div class="card-body">
+                <p *ngIf="about.subtitulo.trim().length>0" style="font-style: oblique;" class="card-title">{{about.subtitulo}}</p>
+                <p class="card-text"> {{about.descripcion}}</p>
+            </div>
+        </div>
+
+    </section>
+    <div class="shell-footer text-center">
+        <h3>Puedo ayudar.</h3>
+        <p>Actualmente estoy disponible para trabajo empresarial.</p>
+        <a href="mailTo:{{socialPagina.social.email}}" title="Conctactame">
+            <button type="button" class="btn btn-outline-secondary btn-rounded">Mensajeame</button>
+        </a>
+    </div>
+</div>
