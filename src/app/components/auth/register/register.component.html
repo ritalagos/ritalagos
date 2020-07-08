@@ -1,0 +1,45 @@
+<div class="container-login">
+    <div *ngIf="registro" style="position: absolute;" class="alert alert-danger alert-dismissible fade show float-sm-right" role="alert">
+        Ocurrio un error al registrarse
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+
+    <div class="login animate__animated animate__fadeInDown">
+        <form (ngSubmit)="registrar()" [formGroup]="formulario" class="form-signin">
+            <div class="text-center mb-4">
+                <img class="mb-4" src="assets/images/logo.png" alt="" width="82" height="82">
+                <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+            </div>
+
+            <div class="form-label-group">
+                <input [class.is-invalid]="nombreNoValido" formControlName="nombre" name="nombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre">
+                <label for="inputNombre">Nombre</label>
+                <small *ngIf="nombreNoValido" class="form-text text-danger">Nombre obligatorio</small>
+            </div>
+
+            <div class="form-label-group">
+                <input [class.is-invalid]="emailNoValido" formControlName="email" name="email" type="email" id="inputEmail" class="form-control" placeholder="Correo">
+                <label for="inputEmail">Correo</label>
+                <small *ngIf="emailNoValido" class="form-text text-danger">Correo obligatorio</small>
+            </div>
+
+            <div class="form-label-group">
+                <input [class.is-invalid]="passwordNoValido" formControlName="password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                <label for="inputPassword">Contraseña</label>
+                <small *ngIf="passwordNoValido" class="form-text text-danger">Contraseña obligatorio</small>
+            </div>
+            <div class="form-label-group text-right">
+                <a routerLink="/login" class="stretched-link"> Ya tienes cuenta? / Ingresar</a>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Crear cuenta</button>
+        </form>
+    </div>
+
+    <div class="text-center p-4">
+        <a routerLink="/home" class="ruta-home badge badge-success">Ver portafolio</a>
+    </div>
+
+</div>

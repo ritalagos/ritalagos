@@ -1,0 +1,19 @@
+<div class="d-flex" id="wrapper">
+    <!---Start Sidebar---------->
+    <aside class="sidebar-container border-right">
+        <app-sidebar></app-sidebar>
+    </aside>
+    <!---#End Sidebar---------->
+
+    <!---Start Main---------->
+    <div id="main" class="w-100">
+        <app-header></app-header>
+
+        <router-outlet></router-outlet>
+
+        <!---Footer---------->
+        <app-footer></app-footer>
+    </div>
+    <!---#End Main---------->
+
+</div>
