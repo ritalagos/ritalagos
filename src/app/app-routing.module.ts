@@ -1,18 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PortafolioComponent } from './pages/portafolio/portafolio.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ItemsComponent } from './pages/items/items.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { SearchComponent } from './pages/search/search.component';
+import { AuthGuard } from './guards/auth.guard';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: 'home', component: PortafolioComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'photos', component: ItemsComponent },
-  { path: 'search/:termino', component: SearchComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  {
+    path: '',
+    component: PortfolioComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./components/portfolio/portfolio.module').then(m => m.PortfolioModule)
+      }
+    ]
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./components/auth/login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./components/auth/register/register.module').then(m => m.RegisterModule)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: ''
+  },
 ];
 
 @NgModule({
