@@ -10,7 +10,7 @@ export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
 
-  private apiKey = 'AIzaSyA0hx-1GmtnBZWtz51tsZlXk0afC5KQH5A';
+  private apiKey = '*************************************';
 
   usuarioToken: string;
 
