@@ -1,1 +1,30 @@
-<p>sidebar works!</p>
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a routerLink="dashboard" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="images" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i> Imagenes
+                </a>
+            </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Más opciones</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                <span data-feather="plus-circle"></span>
+            </a>
+        </h6>
+        <ul class="nav flex-column mb-2 footer mt-auto py-2">
+            <li class="nav-item m-2">
+                <a class="nav-link btn btn-block btn-primary border-bottom" routerLink="/home">
+                    <span data-feather="file-text"></span> Portafolio
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

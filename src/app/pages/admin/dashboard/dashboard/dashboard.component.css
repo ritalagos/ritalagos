@@ -1,0 +1,13 @@
+.card-body {
+    padding: .8rem;
+}
+
+.image-card {
+    font-size: 4rem;
+}
+
+.linea {
+    background-color: #3f51b5;
+    height: 2px;
+    bottom: 0;
+}

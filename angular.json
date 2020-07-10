@@ -29,6 +29,7 @@
                             "src/assets/lightbox/css/lightbox.css",
                             "src/assets/css/fonts.css",
                             "src/assets/css/estilos.css",
+                            "src/assets/css/dashboard.css",
                             "src/styles.css"
                         ],
                         "scripts": [
@@ -36,7 +37,8 @@
                             "node_modules/popper.js/dist/umd/popper.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "src/assets/lightbox/js/lightbox-plus-jquery.min.js",
-                            "src/assets/js/script.js"
+                            "src/assets/js/script.js",
+                            "src/assets/js/dashboard.js"
                         ]
                     },
                     "configurations": {

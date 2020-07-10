@@ -1,0 +1,25 @@
+.linea {
+    background-color: #2a3886;
+    height: 2px;
+    bottom: 0;
+}
+
+.btn-s-radius {
+    border: none;
+    border-radius: 0;
+    margin: 0.4rem;
+    box-shadow: 2px 1px 12px rgb(194, 198, 207);
+}
+
+.back-color-success {
+    background-color: #80baec;
+}
+
+.back-color-modify {
+    background-color: #ad7fa7;
+}
+
+
+/* .modal-header .close {
+    padding: .5rem, .5rem !important;
+} */
