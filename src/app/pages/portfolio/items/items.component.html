@@ -4,7 +4,7 @@
             <section id="defilee" class="defilee__ctnr">
 
                 <div *ngFor="let photo of photosServices.photos" class="defilee__div {{photo.clase}} animacion fundirse">
-                    <img src="assets/images/{{photo.url}}.png" alt="{{photo.cod}}">
+                    <img src="{{photo.fileUrl}}" alt="{{photo.codigo}}">
                     <p>{{photo.descripcion}}</p>
                 </div>
                 <!--

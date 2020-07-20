@@ -11,13 +11,12 @@ export class AboutService {
 
   constructor(private http: HttpClient) {
     this.cargaAbout();
-   }
+  }
 
   private cargaAbout(){
     return new Promise((resolve , reject) => {
       this.http.get('assets/data/about.json').subscribe((resp: AboutInteface[]) => {
         this.about = resp;
-        console.log(this.about);
         resolve();
       });
     });

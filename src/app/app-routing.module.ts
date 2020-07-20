@@ -16,6 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)
   },
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'register',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./components/auth/register/register.module').then(m => m.RegisterModule)
   },
   {

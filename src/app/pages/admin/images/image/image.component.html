@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Nuevo Imagen</h5>
+        <hr class="linea">
+        <div>
+            <form (ngSubmit)="addAndUpdate()" [formGroup]="formulario">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Codigo</label>
+                        <input [class.is-invalid]="codigoNoValido" formControlName="codigo" name="codigo" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Descripcion</label>
+                        <input [class.is-invalid]="descripcionNoValido" formControlName="descripcion" name="descripcion" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputState">Categoria</label>
+                        <select formControlName="categoria" name="categoria" id="inputState" class="form-control">
+                                <!-- <option selected>Seleccione</option> -->
+                                <option *ngFor="let categorie of categories" [value]="categorie.cod">{{categorie.cod}}</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card-header bg-transparent border-success">
+                            <div class="upload-btn-wrapper">
+                                <button class="btn">Importar</button>
+                                <input type="file" accept=".png, .jpg" (change)="cargarImage($event)" name="myfile" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--[ngClass]="{'btn-group':!widthClase, 'btn-group-vertical': widthClase}"-->
+                            <div class="col-md-8">
+                                <div class="card-body text-center">
+                                    <img [src]="urlImg" style="width: 50%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <button type="button" (click)="cancelarAddAndUpdate()" class="btn btn-danger btn-s-radius">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-s-radius">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

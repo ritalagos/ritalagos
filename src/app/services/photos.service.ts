@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { PhotosInteface } from '../interfaces/photos.interface';
+import { ImageService } from './admin/image.service';
+import { ImageI } from '../interfaces/admin/images.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -8,17 +9,17 @@ import { PhotosInteface } from '../interfaces/photos.interface';
 export class PhotosService {
 
   cargando = true;
-  photos: PhotosInteface[] = [];
-  filterPhotos: PhotosInteface[] = [];
+  photos: ImageI[] = [];
+  filterPhotos: ImageI[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private imagaService: ImageService) {
     this.cargarPhotos();
   }
 
   private cargarPhotos(){
     return new Promise((resolve, reject) => {
-      this.http.get('https://portafolio-rita.firebaseio.com/photos.json')
-      .subscribe((resp: PhotosInteface[]) => {
+      this.imagaService.getAllImages()
+      .subscribe((resp) => {
         this.photos = resp;
         this.addClassJson(resp);
 
@@ -51,7 +52,7 @@ export class PhotosService {
     });
   }
 
-  public addClassJson(res: PhotosInteface[]){
+  public addClassJson(res: ImageI[]){
     const clase = [
       ' ',
       'defilee__div--special1',
@@ -60,7 +61,7 @@ export class PhotosService {
       'defilee__div--special4',
     ];
 
-    for(let i = 0; i < res.length; i++){
+    for (let i = 0; i < res.length; i++){
       const random: number = this.getRandomArbitrary(0, 4);
       res[i]['clase'] = clase[random];
     }

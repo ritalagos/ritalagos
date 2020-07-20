@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portafolio-rita": {
+      "hosting": {
+        "portafolio-rita": [
+          "portafolio-rita"
+        ]
+      }
+    }
+  }
+}

@@ -10,8 +10,8 @@ export class FooterComponent implements OnInit {
 
   fecha = new Date().getFullYear();
 
-  acercaDe = 'Rita Lagos es un profesional idependiente que vive en la ciudad de Lima. Realiza ilustración, diseño y animación. Su especialidad es el diseño.';
-  infoPagina = 'Si tiene alguna pregunta sobre mis servicios, o simplemente quiere saludarme, no dude en ponerse en contacto conmigo. A continuación estan mis páginas sociales y mi correo electrónico.';
+  acercaDe = 'Rita Lagos es un profesional idependiente que vive en la ciudad de Lima. Realiza ilustración, diseño y animación. Su pasión es el diseño.';
+  infoPagina = 'Mi redes sociales y mi correo electrónico: rita1999lagos@gmail.com para más información.';
 
   constructor(public socialPagina: SocialPaginaService) {
   }

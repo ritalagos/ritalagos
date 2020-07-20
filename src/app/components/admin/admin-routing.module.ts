@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('../../pages/admin/images/images.module').then(m => m.ImagesModule)
       },
       {
+        path: 'categories',
+        loadChildren: () => import('../../pages/admin/categories/categories.module').then(m => m.CategoriesModule)
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'dashboard'
