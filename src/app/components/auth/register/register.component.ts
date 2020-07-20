@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioModel } from '../../../models/usuario.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/admin/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -48,6 +48,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registrar(){
+    /*
     if (this.formulario.invalid){
       return Object.values(this.formulario.controls).forEach(control => {
         control.markAsTouched();
@@ -69,7 +70,7 @@ export class RegisterComponent implements OnInit {
           this.registro = false;
         }, 4000);
       }
-    });
+    });*/
   }
 
 

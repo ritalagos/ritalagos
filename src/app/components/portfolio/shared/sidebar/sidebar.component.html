@@ -8,7 +8,12 @@
         <li class="d-block p-2"><a routerLink="/photos" title="Proyectos">Proyectos</a></li>
         <li class="d-block p-2"><a routerLink="/about" title="Sobre mi">Sobre mi</a></li>
         <li class="d-block p-2"><a routerLink="/contact" title="Contacto">Contacto</a></li>
-        <li class="d-block p-2"><a routerLink="/login" title="Login">Login</a></li>
+        <li *ngIf="authService.usuarioData$ | async; else showLogin" class="d-block p-2">
+            <a (click)="onLogout()" title="Logout">Logout</a>
+        </li>
+        <ng-template #showLogin>
+            <li class="d-block p-2"><a routerLink="/login" title="Login">Login</a></li>
+        </ng-template>
     </ul>
 </nav>
 <div class="sidebar-footer">

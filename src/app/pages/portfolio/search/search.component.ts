@@ -13,7 +13,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.params.subscribe(params => {
-      // console.log(params['termino']);
       this.photoService.buscarPhoto(params['termino']);
     });
   }

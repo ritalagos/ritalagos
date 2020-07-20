@@ -5,8 +5,8 @@
     <div class="photograhy">
         <div class="gutters card-columns">
             <div *ngFor="let photo of photoService.photos" class="card text-center animacion fundirse">
-                <a href="assets/images/{{photo.url}}.png" title="" data-lightbox="roadtrip">
-                    <img src="assets/images/{{photo.url}}.png" class="card-img-top imagesource" alt="{{photo.cod}}">
+                <a href="{{photo.fileUrl}}" title="" data-lightbox="roadtrip">
+                    <img src="{{photo.fileUrl}}" class="card-img-top imagesource" alt="{{photo.codigo}}">
                     <div>
                         <h3 class="card-title">{{photo.descripcion}}</h3>
                     </div>

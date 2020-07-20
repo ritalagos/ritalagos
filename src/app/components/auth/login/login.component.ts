@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/admin/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,19 +34,15 @@ export class LoginComponent implements OnInit {
       });
     }
     const usuario = this.formulario.value;
-    this.authService.logIn(usuario).subscribe(resp => {
-      this.router.navigateByUrl('/admin');
+    this.authService.login(usuario)
+    .then(data => {
 
+      this.router.navigateByUrl('/admin');
       this.formulario.reset({
         nombre: '',
         password: ''
       });
-    }, (err) => {
-      if (err) {
-        this.router.navigateByUrl('/login');
-      }
-    });
+    })
+    .catch(err => console.log('Error->', err));
   }
-
-
 }
